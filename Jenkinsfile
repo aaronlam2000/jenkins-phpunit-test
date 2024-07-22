@@ -18,12 +18,7 @@ pipeline {
 	}
 	post {
         always {
-			script {
-                // Ensure the junit step has the correct context
-                node {
-                    junit testResults: 'logs/unitreport.xml'
-                }
-            }
+            junit testResults: 'logs/unitreport.xml'
         }
     }
 
